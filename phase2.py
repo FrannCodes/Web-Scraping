@@ -32,23 +32,23 @@ while not end_of_page:
         # add product page urls to an array of product_page_url:
         product_page_url.append(product.get("href").replace("../../..", "https://books.toscrape.com/catalogue", 1))
 
-    # finding the other product information
-    for url_upc in product_page_url:
-        product_page = requests.get(url_upc)
-        product_doc = BeautifulSoup(product_page.content, "html.parser")
-
-        product_information_doc = product_doc.find("table", class_ = "table table-striped")
-        universal_product_code = product_information_doc.find_all("tr")[0].string
-        print(universal_product_code)
-
-
     if next_page is None:
         end_of_page = True
     else:
         url_section = next_page.find("a").get("href")
         url = "https://books.toscrape.com/catalogue/category/books/fantasy_19/" + url_section
-print(product_page_url)
 
+print(product_page_url)
+# find product information per product url
+for url_product in product_page_url:
+    product_page = requests.get(url_product)
+    product_doc = BeautifulSoup(product_page.content, "html.parser")
+    product_information_doc = product_doc.find("table", class_="table table-striped")
+
+    # Universal Product Code (UPC)
+    universal_product_code.append(product_information_doc.find_all("td")[0].string)
+
+print(universal_product_code)
 
 
 # Universal product code

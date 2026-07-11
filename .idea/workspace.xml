@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="837329ba-c1ca-44b7-b519-48c08af35e54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/WebScraping.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phase1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phase2.py" afterDir="false" />
+    <list default="true" id="837329ba-c1ca-44b7-b519-48c08af35e54" name="Changes" comment="phase one of web scraping and part of phase two">
+      <change beforePath="$PROJECT_DIR$/phase2.py" beforeDir="false" afterPath="$PROJECT_DIR$/phase2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +93,15 @@
       <option name="presentableId" value="Default" />
       <updated>1783633662442</updated>
     </task>
+    <task id="LOCAL-00001" summary="phase one of web scraping and part of phase two">
+      <option name="closed" value="true" />
+      <created>1783787228677</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783787228677</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="phase one of web scraping and part of phase two" />
+    <option name="LAST_COMMIT_MESSAGE" value="phase one of web scraping and part of phase two" />
   </component>
 </project>
