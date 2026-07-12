@@ -16,6 +16,7 @@ product_description = []
 category = []
 review_rating = []
 image_url = []
+quantity_available = []
 
 # a loop that checks all products until the end of page
 while not end_of_page:
@@ -47,6 +48,11 @@ for url_product in product_page_url:
 
     # Universal Product Code (UPC)
     universal_product_code.append(product_information_doc.find_all("td")[0].string)
+    # Price Excluding Tax
+    price_excluding_tax.append(product_information_doc.find_all("td")[2].string)
+    # Price Including Tax
+    price_including_tax.append(product_information_doc.find_all("td")[3].string)
+
 
 print(universal_product_code)
 
