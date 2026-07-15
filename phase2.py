@@ -28,7 +28,7 @@ class Scraper:
 
             next_page = doc.find("li", class_="next")
 
-            product_page_url_doc = doc.find_all("div", class_="image_container")  # gets an array elements which contains the links of the books
+            product_page_url_doc = doc.find_all("div", class_="image_container")  # gets a list of elements which contains the links of the books
             for p in product_page_url_doc:
                 # finds a string of elements with the tag "a"
                 product = p.find("a")
@@ -70,7 +70,7 @@ class Scraper:
             product_information_doc2 = product_doc.find("article", class_="product_page")
             #####################################################################################
             # Product Description
-            self.product_description.append(product_information_doc2.find("p", class_=None).string)
+            self.product_description.append(product_information_doc2.find("p", class_= None).string)
 
             # Category Section:
             product_information_doc3 = product_doc.find("ul", class_="breadcrumb")
