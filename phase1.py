@@ -17,7 +17,7 @@ class Scraper:
         self.image_url = ""
 
     def scrape(self):
-        page = requests.get(url)
+        page = requests.get(self.url)
         doc = BeautifulSoup(page.content, "html.parser")
 
         # Product Page URL
