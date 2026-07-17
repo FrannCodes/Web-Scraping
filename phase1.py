@@ -2,8 +2,6 @@ import csv
 from bs4 import BeautifulSoup
 import requests
 
-url = "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
-
 class Scraper:
     def __init__(self, url):
         self.url = url
@@ -74,9 +72,3 @@ class Scraper:
             # create headers and columns
             writer.writerow(headers)
             writer.writerow(columns)
-
-scraper = Scraper(url)
-scraper.scrape()
-scraper.csv_file()
-
-print(scraper.book_title)

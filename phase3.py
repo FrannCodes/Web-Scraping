@@ -2,8 +2,6 @@ import csv
 from bs4 import BeautifulSoup
 import requests
 
-url = "https://books.toscrape.com/index.html"
-
 class Scraper:
     def __init__(self, url):
         self.url = url

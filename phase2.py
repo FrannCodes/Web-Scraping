@@ -100,9 +100,3 @@ class Scraper:
             for i in range(len(self.product_page_url)):
                 row = [self.book_title[i], self.product_page_url[i], self.universal_product_code[i], self.price_including_tax[i], self.price_excluding_tax[i], self.quantity_available[i], self.product_description[i], self.category[i], self.review_rating[i], self.image_url[i]]
                 writer.writerow(row)
-
-url = "https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html"
-scraper = Scraper(url)
-
-scraper.run()
-scraper.csv_file()
