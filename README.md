@@ -33,7 +33,10 @@
 ```bash
 pip install -r requirements.txt
 ```
-### - Run the scraper
+#### - Run the scraper:
+#####    - for phase1, use the url: "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
+#####    - for phase2, use the url: "https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html"
+#####    - for phase3 and phase4, use the url: "https://books.toscrape.com/index.html"
 
 ## Skills Gained: 
 #### - Web scraping with BeautifulSoup
