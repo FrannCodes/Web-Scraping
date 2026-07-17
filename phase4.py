@@ -89,7 +89,7 @@ class Scraper:
                 product_information_doc2 = product_doc.find("article", class_="product_page")
                 #####################################################################################
                 # Product Description
-                description = product_information_doc2.find("p", class_= None)
+                description = product_information_doc2.find("p", class_=None)
                 if description is not None:
                     product_description.append(description.string)
                 else:
@@ -132,3 +132,17 @@ class Scraper:
                     for v in value.values():
                         row.append(v[i])
                     writer.writerow(row)
+
+    def get_image(self):
+        # for each product in each category
+        for values in self.categories.values():
+            # retrieving the key, "Image URL" to get each element in the list, values["Image URL"]
+            for url_image in values["Image URL"]:
+                image = requests.get(url_image)
+                image_name = url_image.rsplit("/", 1)[1]
+                with open(image_name, "wb") as file:
+                    file.write(image.content)
+
+scraper = Scraper(url)
+scraper.scrape()
+scraper.get_image()
